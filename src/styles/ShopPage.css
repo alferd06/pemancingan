@@ -1,0 +1,168 @@
+/* src/styles/ShopPage.css */
+.shop-page-container {
+  padding: 20px 0;
+}
+
+.shop-page-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #007bff;
+  font-size: 2.5em;
+}
+
+.shop-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.filters-section, .sort-section {
+  flex: 1;
+  min-width: 280px;
+}
+
+.filters-section h3, .sort-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.filter-group, .sort-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-group label, .sort-group label {
+  font-weight: bold;
+  color: #555;
+  min-width: 80px;
+}
+
+.filter-group select,
+.filter-group input[type="number"],
+.sort-group select {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  max-width: 200px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* ProductCard Styling */
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.product-info {
+  padding: 0 15px;
+}
+
+.product-info h3 {
+  font-size: 1.4em;
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.product-info .product-category,
+.product-info .product-brand {
+  font-size: 0.85em;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.product-info .product-rating {
+  font-size: 0.9em;
+  color: #f7b731;
+  margin-bottom: 10px;
+}
+
+.product-info .product-price {
+  font-weight: bold;
+  color: #28a745;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.product-card .btn {
+  font-size: 0.9em;
+  padding: 8px 15px;
+}
+
+@media (max-width: 768px) {
+  .shop-controls {
+    flex-direction: column;
+  }
+  .filters-section, .sort-section {
+    width: 100%;
+    min-width: unset;
+  }
+  .filter-group, .sort-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .filter-group select,
+  .filter-group input[type="number"],
+  .sort-group select {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Shop Page Search Bar */
+.search-section {
+  flex-basis: 100%; /* Agar search bar mengambil lebar penuh */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-input {
+  width: 80%; /* Lebar input search */
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Bentuk kapsul */
+  font-size: 1.1em;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}

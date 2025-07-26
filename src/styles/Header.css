@@ -1,0 +1,53 @@
+/* src/styles/Header.css */
+header {
+  background-color: #282c34;
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+
+.main-nav {
+  /* Tidak perlu styling background atau padding jika sudah di Header */
+}
+
+.main-nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .main-nav a {
+    margin: 0 5px;
+  }
+}

@@ -1,0 +1,28 @@
+/* src/styles/NotFoundPage.css */
+.not-found-container {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.not-found-container h1 {
+  font-size: 5em;
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+
+.not-found-container h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.not-found-container p {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 30px;
+}

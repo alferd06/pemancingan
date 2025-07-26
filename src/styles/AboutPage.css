@@ -1,0 +1,94 @@
+/* src/styles/AboutPage.css */
+.about-page-container {
+  padding: 20px 0;
+}
+
+.about-page-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #007bff;
+  font-size: 2.5em;
+}
+
+.about-section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.about-section h2 {
+  font-size: 2em;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.about-section p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+  font-size: 1.05em;
+  color: #555;
+}
+
+.about-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-section ul li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1.05em;
+  color: #555;
+}
+
+.about-section ul li::before {
+  content: '✓';
+  color: #28a745;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.about-section address {
+  font-style: normal;
+  line-height: 1.8;
+  color: #555;
+}
+
+.about-section address a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.about-section address a:hover {
+  text-decoration: underline;
+}
+
+.map-container {
+  margin-top: 25px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 20px;
+  }
+  .about-section h2 {
+    font-size: 1.8em;
+  }
+  .about-section p, .about-section ul li {
+    font-size: 1em;
+  }
+}

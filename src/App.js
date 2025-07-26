@@ -1,26 +1,33 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/homePage';
-import ShopPage from './pages/shopPage';
-import AboutPage from './pages/aboutPage';
-import Header from './components/Header'; // Buat komponen Header
-import Footer from './components/Footer'; // Buat komponen Footer
-import './App.css'; // Untuk styling global
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import ShopPage from './pages/ShopPage';
+import AboutPage from './pages/AboutPage';
+import ProductDetail from './pages/ProductDetail';
+import NotFoundPage from './pages/NotFoundPage'; // <--- IMPORT HALAMAN 404
+
+import './styles/global.css';
 
 function App() {
   return (
     <Router>
-      <Header /> {/* Header akan selalu muncul */}
-      <main> {/* Konten utama akan berganti sesuai route */}
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/shop" element={<ShopPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          {/* Kamu bisa tambahkan route untuk detail produk, dll. */}
-        </Routes>
-      </main>
-      <Footer /> {/* Footer akan selalu muncul */}
+      <div id="root">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="*" element={<NotFoundPage />} /> {/* <--- RUTE 404 SEBAGAI YANG TERAKHIR */}
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 }
